@@ -1,15 +1,21 @@
 {
   "name": "destron",
   "version": "1.0.0",
-  "main": "index.js",
+  "description": "Your app description",
+  "main": "main.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron .",
+    "build": "electron-builder"
   },
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "build": {
+    "appId": "madman-modding.destron",
+    "linux": {
+      "target": ["AppImage"],
+      "category": "Utility"
+    }
+  },
   "devDependencies": {
-    "electron": "^31.3.0"
+    "electron": "^25.0.0",
+    "electron-builder": "^23.0.0"
   }
 }
